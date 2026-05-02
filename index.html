@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Resume Analyzer</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- SLIDE 1 -->
+<div id="slide1" class="slide active">
+  <h2>🚀 Upload Resume</h2>
+
+  <input type="file" id="resumeFile" accept=".pdf">
+
+  <h3>Select Trending Role</h3>
+  <select id="jobRole">
+    <option value="">Select Role</option>
+    <option>AI Engineer</option>
+    <option>Prompt Engineer</option>
+    <option>Data Scientist</option>
+    <option>Cloud Engineer</option>
+    <option>Cyber Security Analyst</option>
+    <option>Full Stack Developer</option>
+  </select>
+
+  <button onclick="goToAnalysis()">Next</button>
+</div>
+
+<!-- SLIDE 2 -->
+<div id="slide2" class="slide">
+  <h2>📊 Resume Analysis</h2>
+
+  <p><b>Selected Role:</b> <span id="selectedRole"></span></p>
+
+  <h3>ATS Score: <span id="score"></span>%</h3>
+
+  <div id="chart"></div>
+
+  <h4>✅ Matched Skills</h4>
+  <div class="skills-box" id="detected"></div>
+
+  <h4>❌ Missing Skills</h4>
+  <div class="skills-box" id="missing"></div>
+
+  <h4>🚀 Skills to Upgrade</h4>
+  <div class="skills-box" id="upgrade"></div>
+
+  <h4>🤖 Suggested Role</h4>
+  <p id="suggested"></p>
+
+  <button onclick="showFinal()">Next → Job Insights</button>
+</div>
+
+<!-- SLIDE 3 -->
+<div id="slide3" class="slide">
+  <h2>💼 Job Insights</h2>
+
+  <h4>🎯 Selected Role Vacancy</h4>
+  <div id="finalSelected"></div>
+
+  <h4>🤖 Suggested Role Vacancy</h4>
+  <div id="finalSuggested"></div>
+
+  <button onclick="restart()">Start Again</button>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
